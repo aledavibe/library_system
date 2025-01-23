@@ -115,3 +115,76 @@ Faça suas alterações e adicione testes, se necessário.
 Commit suas alterações (git commit -m 'Adiciona nova funcionalidade').
 Envie as alterações para o repositório remoto (git push origin minha-feature).
 Abra um pull request explicando suas mudanças.
+
+
+
+##############################################################################################################
+
+
+
+Acessando o Swagger UI
+
+O Swagger UI fornece uma interface interativa para explorar e testar os endpoints da API de forma visual. Após configurar o servidor FastAPI corretamente, você pode acessar o Swagger UI diretamente pelo navegador para interagir com a API.
+
+Requisitos
+
+Você deve ter a API rodando localmente ou em um servidor.
+A API deve estar utilizando o FastAPI, que integra automaticamente o Swagger UI.
+Passos para Acessar o Swagger UI
+
+Rodar a API Localmente
+
+Para começar, você precisa rodar a API em sua máquina local utilizando o Uvicorn. No terminal, dentro do diretório do seu projeto, execute o seguinte comando:
+
+uvicorn app.main:app --reload
+
+Isso iniciará o servidor localmente e permitirá que você acesse a API em http://127.0.0.1:8000.
+
+Acessar o Swagger UI
+
+Após iniciar o servidor, o Swagger UI estará disponível automaticamente. Para acessá-lo, basta abrir um navegador e digitar o seguinte endereço:
+
+http://127.0.0.1:8000/docs
+
+
+A página do Swagger UI será carregada e você verá a interface onde poderá interagir com os endpoints da sua API.
+
+Interagir com os Endpoints
+
+O Swagger UI exibirá todos os endpoints da API com base nas rotas definidas no seu código FastAPI.
+
+Você pode clicar em cada endpoint para expandir as informações e ver detalhes como os parâmetros de entrada, tipos de resposta e descrições.
+
+Para testar um endpoint, basta preencher os campos necessários (caso haja parâmetros) e clicar no botão "Execute".
+
+O Swagger UI irá realizar a chamada HTTP para o servidor e exibirá a resposta diretamente na interface, incluindo status da resposta, cabeçalhos e o corpo da resposta (se houver).
+
+Acessar a Documentação da OpenAPI
+
+Se você preferir visualizar a documentação da API no formato OpenAPI JSON, pode acessá-la diretamente pelo seguinte endereço:
+
+http://127.0.0.1:8000/openapi.json
+
+Esse arquivo contém uma descrição detalhada dos endpoints e parâmetros da API em formato JSON e pode ser utilizado para gerar documentação adicional ou integrá-la com outras ferramentas.
+
+Funcionalidades no Swagger UI
+
+Explorar Endpoints: Todos os endpoints disponíveis na API estarão listados, com a opção de expandi-los para visualizar mais informações.
+
+Testar a API: Você pode testar diretamente a API preenchendo os parâmetros requeridos e clicando em "Execute".
+
+Ver Respostas: O Swagger UI exibirá as respostas da API, incluindo o status HTTP (200, 404, 500, etc.), os dados retornados e possíveis mensagens de erro.
+
+Filtros de Pesquisa: Você pode utilizar filtros para buscar por rotas específicas na documentação.
+
+Exemplos de Uso
+
+Aqui estão alguns exemplos do que você pode fazer diretamente no Swagger UI:
+
+Cadastrar um novo livro: Preencha os campos necessários (como título, autor, ano, etc.) e execute a chamada POST para criar um novo livro.
+
+Listar livros: Você pode fazer uma requisição GET para listar todos os livros cadastrados, com a possibilidade de filtrar por título ou autor.
+
+Registrar empréstimo: Faça uma requisição POST para registrar o empréstimo de livros, especificando os detalhes necessários, como o ID do livro e o usuário.
+
+Registrar devolução: Para registrar a devolução de um livro, você pode enviar os dados necessários via POST e obter informações sobre o atraso e a multa, se aplicável.
