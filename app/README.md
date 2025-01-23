@@ -5,6 +5,7 @@ Descrição
 O Sistema de Biblioteca é uma API desenvolvida com FastAPI que permite gerenciar empréstimos de livros em uma biblioteca. A API possui funcionalidades para cadastrar livros, realizar empréstimos e devoluções, e gerar multas em caso de atraso na devolução.
 
 Funcionalidades
+
 Livros
 
 Cadastrar livro (título, autor, ano de publicação, quantidade disponível).
@@ -31,6 +32,7 @@ SQLite: Banco de dados utilizado para armazenar as informações.
 Pydantic: Biblioteca para validação de dados.
 
 Pré-requisitos
+
 Antes de rodar o projeto, verifique se você tem o Python 3.7+ instalado em seu computador.
 
 Instale as dependências do projeto:
@@ -40,9 +42,11 @@ pip install -r requirements.txt
 Como Rodar a API
 
 Passo 1: Clonar o Repositório
+
 Clone o repositório para a sua máquina local:
 
 git clone https://github.com/aledavibe/library_system.git
+
 cd library_system
 
 Passo 2: Configurar o Ambiente Virtual (opcional, mas recomendado)
@@ -52,11 +56,13 @@ Se você quiser criar um ambiente virtual para isolar as dependências, execute 
 No Windows:
 
 python -m venv venv
+
 .\venv\Scripts\activate
 
 No Linux/MacOS:
 
 python3 -m venv venv
+
 source venv/bin/activate
 
 Passo 3: Instalar as Dependências
@@ -78,14 +84,13 @@ Passo 5: Acessar a Documentação da API
 O FastAPI gera automaticamente a documentação interativa da API. Para acessá-la, basta navegar até o seguinte endereço no seu navegador:
 
 Swagger UI (para testar os endpoints interativamente):
-
 http://127.0.0.1:8000/docs
 
 OpenAPI (documentação em formato JSON):
 
 http://127.0.0.1:8000/openapi.json
-
 Estrutura de Diretórios
+
 Aqui está a estrutura de diretórios do projeto:
 
 library_system/
